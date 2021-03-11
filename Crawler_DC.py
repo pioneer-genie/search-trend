@@ -105,7 +105,7 @@ class Crawler_DC:
 
     def execute(self):
         gal_name = 'jaetae'
-        contents = self.getContentsList_DC(gal_name, 1)[:10]
+        contents = self.getContentsList_DC(gal_name, 1)
 
         # 한 페이지에 있는 모든 게시물을 긁어오는 코드 
         for content in contents[::-1]:
