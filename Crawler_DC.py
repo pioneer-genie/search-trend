@@ -75,7 +75,7 @@ class Crawler_DC:
         date_tag = content.find('td', class_='gall_date')
         date_dict = date_tag.attrs
 
-        if len(date_dict) is 2:
+        if len(date_dict) == 2:
             date = date_dict['title']
         else:
             date = date_tag.text
@@ -104,6 +104,8 @@ class Crawler_DC:
         return content_dict
 
     def execute(self):
+        added_list = []
+
         gal_name = 'jaetae'
         contents = self.getContentsList_DC(gal_name, 1)
 
@@ -119,6 +121,9 @@ class Crawler_DC:
             if (content_dict):
                 content_dict['gal'] = gal_name
                 self.contentsDf = self.contentsDf.append(content_dict, ignore_index=True)
+                added_list.append(content_dict)
+
+        return added_list
 
     def getData(self):
         return self.contentsDf
