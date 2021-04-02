@@ -11,7 +11,7 @@ app.config['JSON_AS_ASCII'] = False
 if (LOCAL_DEBUG):
     mongo_uri = "mongodb://localhost:27017/"
 else:
-    mongo_uri = "mongodb://hgj:FK1JcByAZvIBAShLDW5Ug4XG7GcorrtxKH7qBafVqdIhCRNPUPPWkKWnQ3tv1ccuaB117zAYbNfcsOpYMqIJIQ==@hgj.mongo.cosmos.azure.com:10255/?ssl=true&replicaSet=globaldb&retrywrites=false&maxIdleTimeMS=120000&appName=@hgj@"
+    mongo_uri = ""
 
 crawler = Crawler_DC.Crawler_DC()
 
