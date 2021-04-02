@@ -3,7 +3,7 @@ from pymongo import MongoClient
 import Crawler_DC
 import json
 
-LOCAL_DEBUG = True
+LOCAL_DEBUG = False
 
 app = Flask(__name__)
 app.config['JSON_AS_ASCII'] = False
