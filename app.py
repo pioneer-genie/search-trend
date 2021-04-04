@@ -2,6 +2,7 @@ from flask import Flask, jsonify, render_template
 from pymongo import MongoClient
 import Crawler_DC
 import json
+import os
 
 LOCAL_DEBUG = False
 
@@ -11,7 +12,7 @@ app.config['JSON_AS_ASCII'] = False
 if (LOCAL_DEBUG):
     mongo_uri = "mongodb://localhost:27017/"
 else:
-    mongo_uri = ""
+    mongo_uri = os.environ.get("CUSTOMCONNSTR_MONGO")
 
 crawler = Crawler_DC.Crawler_DC()
 
